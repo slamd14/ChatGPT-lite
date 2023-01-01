@@ -1,15 +1,23 @@
 # Lightweight version of ChatGPT
 Uses API by [Pawan](https://github.com/PawanOsman/)
 
-# Usage:
-```
-usage: ChatGPT-lite [-h] [--session_token SESSION_TOKEN] [--bypass_node BYPASS_NODE (optional)] [--async_mode]
-```
+# Install
+`pip3 install ChatGPT-lite`
+
+# Setup:
 
 ## Getting session token
 Check https://github.com/acheong08/ChatGPT/wiki/Setup
 
-## Example development usage:
+# Usage
+
+## Command line
+
+```
+usage: ChatGPT-lite [-h] [--session_token SESSION_TOKEN] [--bypass_node BYPASS_NODE (optional)] [--async_mode]
+```
+
+## Example development:
 ```python
 import argparse
 import sys
