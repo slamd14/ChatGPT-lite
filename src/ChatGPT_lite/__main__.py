@@ -57,7 +57,7 @@ def main():
     parser.add_argument('--session_token', type=str, default=None)
     parser.add_argument('--bypass_node', type=str,
                         default="https://gpt.pawan.krd")
-    parser.add_argument('--async_mode', type=bool, default=False)
+    parser.add_argument('--async_mode', action='store_true')
     args = parser.parse_args()
 
     if args.session_token is None:
