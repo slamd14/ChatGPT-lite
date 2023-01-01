@@ -1,6 +1,9 @@
 # Lightweight version of ChatGPT
 Uses API by [Pawan](https://github.com/PawanOsman/)
 
+## Disclaimer
+This is not open source. [PawanOsman](https://github.com/PawanOsman/) can see all your requests and your session token.
+
 # Install
 `pip3 install ChatGPT-lite`
 
@@ -95,6 +98,3 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
-# Privacy concerns:
-@PawanOsman can see everything you do
