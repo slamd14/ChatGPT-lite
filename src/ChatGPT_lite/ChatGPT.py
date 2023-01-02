@@ -113,12 +113,8 @@ class Chatbot:
     def validate_token(self, token):
         if token is None:
             return False
-        # parsed = json.loads(base64.b64decode(token.split('.')[1]).decode())
-        # if len(token.split('.')[1]) % 3 == 1:
-        #     token.split('.')[1] += "=="
-        # elif len(token.split('.')[1]) % 3 == 2:
-        #     token.split('.')[1] += "="
-        parsed = json.loads(base64.b64decode(token.split('.')[1] + "===").decode())
+        # parsed = json.loads(base64.b64decode(token.split('.')[1]).decode())  # error: "binascii.a2b_base64(s) binascii.error incorrect padding" comes out
+        parsed = json.loads(base64.b64decode(token.split('.')[1] + "===").decode())  # fix the error
         return datetime.datetime.now().timestamp() <= parsed['exp']
 
     def get_tokens(self):
